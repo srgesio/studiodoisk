@@ -19,3 +19,12 @@
     font-weight: bold;
     color: var(--blue-origin);
 }
+
+.buttonItem.callToAction {
+    border: 1px solid var(--pink-origin);
+}
+
+.buttonItem.callToAction .label {
+    font-weight: 400;
+    color: var(--pink-origin);
+}

@@ -8,6 +8,20 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
     <Layout>
+
+      <section className={styles.callToAction}>
+        <p className={styles.callToActionText}>
+          <b>Projetos de interiores</b> residencial, comercial e consultoria
+        </p>
+
+        <ButtonItem
+          label='Solicite uma proposta'
+          url='https://forms.gle/po1gUefDRdbdWM6S8'
+          callToAction
+          sizing='auto'
+        />
+
+      </section>
       <section className={styles.linksListContainer}>
         <ButtonItem
           label='DOIS.K no Pinterest'
