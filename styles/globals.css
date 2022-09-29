@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1 {
+  margin: 0;
 }
 
 * {
@@ -19,8 +24,28 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
-    color: white;
-    background: black;
+    color: var(--blue-light);
+    background: var(--black-origin);
   }
+}
+
+
+
+:root {
+  --blue-origin: #526A86;
+  --blue-dark: #263240;
+  --blue-light: #9BC4F4;
+  --pink-origin: #EE6668;
+  --pink-dark: #A54749;
+  --pink-light: #FFAAAB;
+  --soft-origin: #D3E1E2;
+  --soft-light: #EBF8F9;
+  --soft-dark: #B3B7B8;
+  --nude-origin: #CCB0A4;
+  --nude-dark: #AF7873;
+  --nude-light: #FDE0D4;
+  --black-origin: #2D2D2D;
+  --white-origin: #FFFFFF;
 }
