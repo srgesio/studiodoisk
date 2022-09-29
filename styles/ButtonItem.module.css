@@ -1,0 +1,21 @@
+.buttonItem {
+    border-radius: 16px;
+    border: 1px solid var(--blue-origin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.buttonItem.fullsize {
+    width: 100%;
+}
+
+.buttonItem.auto {
+    width: fit-content;
+}
+
+.buttonItem .label {
+    font-weight: bold;
+    color: var(--blue-origin);
+}

@@ -10,7 +10,7 @@ export default function Layout({
     children
 }: layoutProps) {
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <title>Studio Dois.K</title>
                 <meta name="description" content="Studio Dois.K" />
@@ -18,9 +18,11 @@ export default function Layout({
 
             </Head>
             <Header />
+            <div className={styles.container}>
 
-            <main>{children}</main>
+                <main>{children}</main>
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
