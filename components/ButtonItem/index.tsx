@@ -13,7 +13,7 @@ type buttonItemProps = {
 export default function ButtonItem({ external = true, url, label, sizing = 'fullsize', callToAction = false }: buttonItemProps) {
 
     return external ? (
-        <a href={url} target='_blank' className={`${styles.buttonItem} ${callToAction ? styles.callToAction : ''} ${sizing == 'fullsize' ? styles.fullsize : ''} ${sizing == 'auto' ? styles.auto : ''}`}>
+        <a href={url} rel="noreferrer" target='_blank' className={`${styles.buttonItem} ${callToAction ? styles.callToAction : ''} ${sizing == 'fullsize' ? styles.fullsize : ''} ${sizing == 'auto' ? styles.auto : ''}`}>
             <span className={styles.label}>
                 {label}
             </span>
