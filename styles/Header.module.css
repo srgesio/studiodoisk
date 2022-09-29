@@ -1,0 +1,13 @@
+.header {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white-origin);
+    padding: 0 8px;
+}
+
+.filler {
+    width: 48px;
+}
