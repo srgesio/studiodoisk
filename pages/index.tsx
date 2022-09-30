@@ -22,6 +22,32 @@ const Home: NextPage = () => {
         />
 
       </section>
+      <section className={styles.contactLinks}>
+        <p className={styles.contactTitle}>
+          Entre em contato!
+        </p>
+        <div className={styles.primaryContactLinks}>
+
+          <ButtonItem
+            label='Instagram'
+            url='https://www.instagram.com/studiodois.k/'
+            callToAction
+            sizing='fullsize'
+          />
+          <ButtonItem
+            label='Whatsapp'
+            url='https://api.whatsapp.com/send?phone=5584996454664'
+            callToAction
+            sizing='fullsize'
+          />
+        </div>
+        <ButtonItem
+          label='studiodois.k@gmail.com '
+          url=''
+          sizing='fullsize'
+        />
+
+      </section>
       <section className={styles.linksListContainer}>
         <ButtonItem
           label='DOIS.K no Pinterest'
