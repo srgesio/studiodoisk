@@ -14,7 +14,7 @@ export default function Header({ }: headerProps) {
                 alt={"Menu icon"}
             />
             <Image
-                src={'/logoDoisK.svg'}
+                src={'/logoDoisk.svg'}
                 width={120}
                 height={34}
                 alt={"Logotipo DOIS.K"}
