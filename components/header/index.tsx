@@ -11,11 +11,13 @@ export default function Header({ }: headerProps) {
                 src={'/icons/Menu.svg'}
                 width={48}
                 height={48}
+                alt={"Menu icon"}
             />
             <Image
                 src={'/logoDoisK.svg'}
                 width={120}
                 height={34}
+                alt={"Logotipo DOIS.K"}
             />
             <span className={styles.filler}></span>
         </header>
