@@ -1,30 +1,32 @@
 import Link from 'next/link'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 import styles from '../../styles/ButtonItem.module.css'
 
 
-type buttonItemProps = {
-    sizing?: "fullsize" | "auto";
-    external?: boolean
-    label: string
+interface buttonItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+
     url: string
+    className?: string
     callToAction?: boolean
+    children: ReactNode
+    fullWidth?: boolean
+    instagram?: boolean
+    whatsapp?: boolean
 }
 
-export default function ButtonItem({ external = true, url, label, sizing = 'fullsize', callToAction = false }: buttonItemProps) {
-
-    return external ? (
-        <a href={url} rel="noreferrer" target='_blank' className={`${styles.buttonItem} ${callToAction ? styles.callToAction : ''} ${sizing == 'fullsize' ? styles.fullsize : ''} ${sizing == 'auto' ? styles.auto : ''}`}>
-            <span className={styles.label}>
-                {label}
-            </span>
-        </a>
-
-    ) : (
+export function ButtonItem({ url, callToAction, children, fullWidth, instagram, whatsapp }: buttonItemProps) {
+    return (
         <Link href={url}>
-            <a className={`${styles.buttonItem} ${callToAction ? styles.callToAction : ''} ${sizing == 'fullsize' ? styles.fullsize : ''} ${sizing == 'auto' ? styles.auto : ''}`}>
-                <span className={styles.label}>
-                    {label}
-                </span>
+            <a className={
+                `
+                ${styles.buttonItem}
+                ${callToAction ? styles.callToAction : ''}
+                ${fullWidth ? styles.fullWidth : styles.auto}
+                ${instagram ? styles.instagram : ''}
+                ${whatsapp ? styles.whatsapp : ''}
+
+                `}>
+                {children}
             </a>
         </Link>
     )

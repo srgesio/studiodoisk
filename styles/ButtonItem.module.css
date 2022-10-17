@@ -1,13 +1,16 @@
 .buttonItem {
     border-radius: 16px;
-    border: 1px solid var(--blue-origin);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     padding: 8px 16px;
+    font-weight: bold;
+    color: var(--blue-dark);
+    border: 1px solid var(--blue-dark);
 }
 
-.buttonItem.fullsize {
+.buttonItem.fullWidth {
     width: 100%;
 }
 
@@ -15,16 +18,20 @@
     width: fit-content;
 }
 
-.buttonItem .label {
-    font-weight: bold;
-    color: var(--blue-origin);
-}
-
 .buttonItem.callToAction {
     border: 1px solid var(--pink-origin);
-}
-
-.buttonItem.callToAction .label {
     font-weight: 400;
     color: var(--pink-origin);
+}
+
+.buttonItem.instagram {
+    background: var(--pink-origin);
+    border: none;
+    font-weight: 700;
+    color: var(--white-origin);
+}
+
+.buttonItem.whatsapp {
+    background: var(--white-origin);
+    font-weight: 700;
 }

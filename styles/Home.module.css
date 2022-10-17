@@ -18,6 +18,33 @@
 }
 
 
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 40px 8px;
+  background: var(--soft-origin);
+}
+
+.contactTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--blue-dark);
+}
+
+.primaryContactLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
 .linksListContainer {
   display: flex;
   flex-direction: column;
