@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- List of buttons
+
+### Changed
+- buttons styles changed
 
 ## [0.0.1] - 2022-09-28
 
