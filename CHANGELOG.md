@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+- Presetantion info by DatoCMS
+- Link with DatoCMS
 - List of buttons
 
 ### Changed

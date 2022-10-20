@@ -1,15 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { ButtonItem } from '../components/ButtonItem'
 import Layout from '../components/layout'
+import { Presentation } from '../components/presentation'
 import styles from '../styles/Home.module.css'
 
 
 const Home: NextPage = () => {
+
   return (
     <Layout>
-
       <section className={styles.callToAction}>
         <p className={styles.callToActionText}>
           <b>Projetos de interiores</b> residencial, comercial e consultoria
@@ -23,6 +25,8 @@ const Home: NextPage = () => {
         </ButtonItem>
 
       </section>
+
+      <Presentation />
       <section className={styles.contactLinks}>
         <p className={styles.contactTitle}>
           Entre em contato!

@@ -1,0 +1,31 @@
+.presentationContainer .presentationContent,
+.presentationImageContainer,
+.presentationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentationContainer {
+    padding: 24px 56px;
+}
+
+.presentationImageContainer .presentationImage {
+    border-radius: 50%;
+}
+
+.presentationName,
+.presentationContainer .presentationContent {
+    text-align: center;
+    color: var(--blue-origin);
+}
+
+.presentationName {
+    font-weight: 800;
+    margin: 16px 0;
+}
+
+.presentationText {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
