@@ -1,52 +1,39 @@
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from '../../styles/Presentation.module.css'
 import { ButtonItem } from "../ButtonItem"
 
+
+
 interface PresentationProps {
-    presentationImage: {
-        url: string
-    }
+    imageUrl: string
     presentationName: string
     presentationText: string
 }
-async function callPresentationData() {
-    return await fetch('/api/presentation', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    }).then(response => response.json())
-        .then((response) => {
-            return response[0]
 
-        })
-}
-export function Presentation() {
-    const [presentation, setPresentation] = useState<PresentationProps>({
-        presentationImage: {
-            url: ''
-        },
-        presentationName: '',
-        presentationText: ''
-    })
+export function Presentation({ imageUrl, presentationName, presentationText }: PresentationProps) {
+
 
     useEffect(() => {
-        callPresentationData().then((dataPresentation) => {
-            setPresentation(dataPresentation)
-        })
+
     }, [])
 
-    console.log(presentation)
     return (
         <div className={styles.presentationContainer}>
             <div className={styles.presentationImageContainer}>
-                <img className={styles.presentationImage} src={presentation.presentationImage.url} alt={presentation.presentationName} />
+                <Image
+                    src={imageUrl}
+                    width={172}
+                    height={172}
+                    alt={presentationName}
+                    className={styles.presentationImage}
+                />
             </div>
             <h2 className={styles.presentationName}>
-                {presentation.presentationName}
+                {presentationName}
             </h2>
             <div className={styles.presentationContent}>
-                <div className={styles.presentationText} dangerouslySetInnerHTML={{ __html: presentation.presentationText }}>
+                <div className={styles.presentationText} dangerouslySetInnerHTML={{ __html: presentationText }}>
                 </div>
                 <div className={styles.presentationCta}>
                     <ButtonItem
@@ -61,3 +48,5 @@ export function Presentation() {
         </div>
     )
 }
+
+

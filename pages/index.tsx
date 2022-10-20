@@ -1,14 +1,24 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 import Image from 'next/image'
+import { ScriptProps } from 'next/script'
 import { useEffect, useState } from 'react'
 import { ButtonItem } from '../components/ButtonItem'
 import Layout from '../components/layout'
 import { Presentation } from '../components/presentation'
+import { getPresentationAPI } from '../lib/api'
 import styles from '../styles/Home.module.css'
+export async function getStaticProps() {
+  const presentation = await getPresentationAPI()
+  return {
+    props: {
+      presentation,
+    },
+  }
+}
 
-
-const Home: NextPage = () => {
+const Home: NextPage = ({ presentation }: any) => {
 
   return (
     <Layout>
@@ -26,7 +36,11 @@ const Home: NextPage = () => {
 
       </section>
 
-      <Presentation />
+      <Presentation
+        imageUrl={presentation.presentationImage.url}
+        presentationName={presentation.presentationName}
+        presentationText={presentation.presentationText}
+      />
       <section className={styles.contactLinks}>
         <p className={styles.contactTitle}>
           Entre em contato!
