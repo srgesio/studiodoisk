@@ -36,5 +36,5 @@ export async function getPresentationAPI() {
                         presentationText
                     }
                 }`})
-    return data?.allPresentations[0]
+    return data?.allPresentations
 }

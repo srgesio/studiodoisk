@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const presentation = await getPresentationAPI()
   return {
     props: {
-      presentation,
+      presentation: presentation[0],
     },
   }
 }
