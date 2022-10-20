@@ -13,13 +13,13 @@ export async function getStaticProps() {
   const presentation = await getPresentationAPI()
   return {
     props: {
-      presentation: presentation[0],
+      presentation: presentation,
     },
   }
 }
 
-const Home: NextPage = ({ presentation }: any) => {
-
+const Home: NextPage = ({ presentation: presentationData }: any) => {
+  const presentation = presentationData[0]
   return (
     <Layout>
       <section className={styles.callToAction}>
