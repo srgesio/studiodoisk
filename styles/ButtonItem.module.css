@@ -1,0 +1,37 @@
+.buttonItem {
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    color: var(--blue-dark);
+    border: 1px solid var(--blue-dark);
+}
+
+.buttonItem.fullWidth {
+    width: 100%;
+}
+
+.buttonItem.auto {
+    width: fit-content;
+}
+
+.buttonItem.callToAction {
+    border: 1px solid var(--pink-origin);
+    font-weight: 400;
+    color: var(--pink-origin);
+}
+
+.buttonItem.instagram {
+    background: var(--pink-origin);
+    border: none;
+    font-weight: 700;
+    color: var(--white-origin);
+}
+
+.buttonItem.whatsapp {
+    background: var(--white-origin);
+    font-weight: 700;
+}
