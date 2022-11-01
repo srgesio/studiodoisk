@@ -21,15 +21,6 @@ h1 {
   box-sizing: border-box;
 }
 
-.slick-track {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--soft-dark);
-  box-shadow: 0 4px 16px #0003 inset;
-}
-
-
 .slick-arrow {
   position: absolute;
   z-index: 1;
@@ -68,6 +59,15 @@ h1 {
 
 .slick-dots li button::before {
   display: none;
+}
+
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--soft-dark);
+  box-shadow: 0 4px 16px #0003 inset;
 }
 
 @media (prefers-color-scheme: dark) {
