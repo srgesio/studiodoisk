@@ -38,3 +38,18 @@ export async function getPresentationAPI() {
                 }`})
     return data?.allPresentations
 }
+export async function getBannersAPI() {
+    const data = await fetchAPI({
+        query: `query {
+                   allBanners(orderBy:_createdAt_ASC) {
+                        bannerImage {
+                            alt
+                            url
+                            width
+                            height
+                        }
+                        url
+                    }
+                }`})
+    return data?.allBanners
+}

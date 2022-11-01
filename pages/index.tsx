@@ -1,25 +1,28 @@
-import type { GetStaticProps, NextPage } from 'next'
-import { AppProps } from 'next/app'
-import Head from 'next/head'
+import type { NextPage } from 'next'
+
 import Image from 'next/image'
-import { ScriptProps } from 'next/script'
-import { useEffect, useState } from 'react'
 import { ButtonItem } from '../components/ButtonItem'
 import Layout from '../components/layout'
+import { SliderGallery } from '../components/slider'
 import { Presentation } from '../components/presentation'
-import { getPresentationAPI } from '../lib/api'
+import { getPresentationAPI, getBannersAPI } from '../lib/api'
 import styles from '../styles/Home.module.css'
 export async function getStaticProps() {
   const presentation = await getPresentationAPI()
+  const banners = await getBannersAPI()
+
   return {
     props: {
       presentation: presentation,
+      banners: banners,
     },
   }
 }
 
-const Home: NextPage = ({ presentation: presentationData }: any) => {
+const Home: NextPage = ({ presentation: presentationData, banners: bannersData }: any) => {
   const presentation = presentationData[0]
+  const banners = bannersData
+
   return (
     <Layout>
       <section className={styles.callToAction}>
@@ -35,7 +38,9 @@ const Home: NextPage = ({ presentation: presentationData }: any) => {
         </ButtonItem>
 
       </section>
-
+      <SliderGallery
+        banners={banners}
+      />
       <Presentation
         imageUrl={presentation.presentationImage.url}
         presentationName={presentation.presentationName}
