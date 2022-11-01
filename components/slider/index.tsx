@@ -36,16 +36,21 @@ export function SliderGallery({
             <Slider {...settings}>
 
                 {banners.map((banner, key) => (
-                    <div className={styles.bannerItemContainer} key={key}>
-                        <Image
-                            src={banner.bannerImage.url}
-                            width={banner.bannerImage.width}
-                            height={banner.bannerImage.height}
-                            alt={banner.bannerImage.alt}
-                            className={styles.bannerImage}
-                            quality={100}
-                        />
-                    </div>
+                    <Link
+                        href={banner.url}
+                        key={key}
+                    >
+                        <div className={styles.bannerItemContainer}>
+                            <Image
+                                src={banner.bannerImage.url}
+                                width={banner.bannerImage.width}
+                                height={banner.bannerImage.height}
+                                alt={banner.bannerImage.alt}
+                                className={styles.bannerImage}
+                                quality={100}
+                            />
+                        </div>
+                    </Link>
                 ))}
 
 
