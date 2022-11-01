@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+- Banner slider and new api lib
 - Enviroment Variable setted
 - Presetantion info by DatoCMS
 - Link with DatoCMS
